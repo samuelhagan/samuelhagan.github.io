@@ -1,0 +1,2 @@
+A need a couple of lines in here that will be changed to demonstrate the power of git.
+Hello world the competent devs are needed.
