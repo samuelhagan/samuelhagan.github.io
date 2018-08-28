@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">    
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <style>
+            .custom-body {
+                background: lightblue;
+            }
+
+            .box {
+                padding: 30px;
+                background: white;
+                display: inline-block;
+
+            }
+
+            .list-group {
+                cursor: pointer;
+            }
+            @media (min-width: 576px) { 
+                .custom-select {
+                    visibility: hidden;
+                }
+            }
+        </style>
+    </head>
+    <body class="custom-body">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Add your site or application content here -->
+        <main class="container">
+
+        <div class="box">
+            <select class="custom-select align-middle d-inline-block">
+                <option value="1">Sort by relevance</option>
+                <option value="2">Sort by price</option>
+                <option value="3">Sort by name</option>
+            </select>  
+
+            <ul class="list-group d-none d-sm-block">
+              <li class="list-group-item active">Sort by relevance</li>
+              <li class="list-group-item">Sort by price</li>
+              <li class="list-group-item">Sort by name</li>
+            </ul>
+        </div>
+         
+        </main>
+        
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script type="text/javascript">
+           $(document).ready(function(event){ 
+                $('.list-group-item').on('click', function(event){
+                   var name = $(this).toggleClass('active');
+                });
+
+                 $('.list-group-item').on('hover', function(event){
+                   var name = $(this).toggleClass('active');
+                });
+            });
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
+
